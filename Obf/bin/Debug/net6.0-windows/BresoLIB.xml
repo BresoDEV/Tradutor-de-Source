@@ -1,0 +1,983 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BresoLIB</name>
+    </assembly>
+    <members>
+        <member name="T:Breso.Componentes">
+            <summary>
+            .<br></br>
+            <b>OBS:</b><br></br>
+            Essa classe ainda esta em fase de testes, sendo assim, nao é aconselhavel usar as funcoes dela
+            </summary>
+        </member>
+        <member name="T:Breso.bgAlpha">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Chamada da funcao para aplicar a transparencia no Form atual<br><br></br></br>
+            <b>Como usar:</b> <i>(preferencialmente usar no formLoad)</i><br></br>
+            <br></br>
+            <br></br><b>bgAlpha MeuForm = new bgAlpha(this);</b>
+            </summary>
+        </member>
+        <member name="F:Breso.bgAlpha.Rr">
+            <summary>
+            .<br></br>
+            .<br></br>Define a cor RED do RGB do fundo do form
+            </summary>
+        </member>
+        <member name="F:Breso.bgAlpha.Gg">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Define a cor GREEN do RGB do fundo do form
+            </summary>
+        </member>
+        <member name="F:Breso.bgAlpha.Bb">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Define a cor BLUE do RGB do fundo do form
+            </summary>
+        </member>
+        <member name="F:Breso.bgAlpha.Botaor">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Define a cor <b>RED</b> do <b>RGB</b> do botao <b>FECHAR</b><br></br><br><b>OBS</b>: Habilite essa opcao na chamada do form.<br></br>Definindo como <b>TRUE</b> o parametro <b>Habilitar_botaoFechar</b> na chamada <b>bgAlpha(this)</b></br>
+            </summary>
+        </member>
+        <member name="F:Breso.bgAlpha.Botaog">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Define a cor <b>GREEN</b> do <b>RGB</b> do botao <b>FECHAR</b><br></br><br><b>OBS</b>: Habilite essa opcao na chamada do form.<br></br>Definindo como <b>TRUE</b> o parametro <b>Habilitar_botaoFechar</b> na chamada <b>bgAlpha(this)</b></br>
+            </summary>
+        </member>
+        <member name="F:Breso.bgAlpha.Botaob">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Define a cor <b>BLUE</b> do <b>RGB</b> do botao <b>FECHAR</b><br></br><br><b>OBS</b>: Habilite essa opcao na chamada do form.<br></br>Definindo como <b>TRUE</b> o parametro <b>Habilitar_botaoFechar</b> na chamada <b>bgAlpha(this)</b></br>
+            </summary>
+        </member>
+        <member name="F:Breso.bgAlpha.Topor">
+             <summary>
+             .<br></br>
+             .<br></br>
+             Define a cor <b>RED</b> do <b>RGB</b> do <b>HEADER</b><br></br><br><b>OBS</b>: Habilite essa opcao na chamada do form.<br></br>Definindo como <b>TRUE</b> o parametro <b>
+             
+            </b> na chamada <b>bgAlpha(this)</b></br>
+             </summary>
+        </member>
+        <member name="F:Breso.bgAlpha.Topog">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Define a cor <b>GREEN</b> do <b>RGB</b> do <b>HEADER</b><br></br><br><b>OBS</b>: Habilite essa opcao na chamada do form.<br></br>Definindo como <b>TRUE</b> o parametro <b>ExibirHeader</b> na chamada <b>bgAlpha(this)</b></br>
+            </summary>
+        </member>
+        <member name="F:Breso.bgAlpha.Topob">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Define a cor <b>BLUE</b> do <b>RGB</b> do <b>HEADER</b><br></br><br><b>OBS</b>: Habilite essa opcao na chamada do form.<br></br>Definindo como <b>TRUE</b> o parametro <b>ExibirHeader</b> na chamada <b>bgAlpha(this)</b></br>
+            </summary>
+        </member>
+        <member name="F:Breso.bgAlpha.Form_Arredondado_Float">
+            <summary>
+            .<br></br>
+            .<br></br>
+            <br></br>Float que define o quanto arendondado vai ser a borda do Form. <br></br><br>Por Padrao = <b>30</b><br></br><b>OBS</b>: Habilite essa opcao na chamada do form.<br></br>Definindo como <b>TRUE</b> o parametro <b>BordaAredondada</b> na chamada <b>bgAlpha(this)</b></br><br></br><br></br><b>Essa variavel deve ser definida ANTES da chamada do form transparente</b>
+             .<br></br>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="T:Breso.bgAlpha.Posicao">
+            <summary>
+            
+            .<br></br>
+            .<br></br>
+            Enumerador usado para definir a posição do Form transparente ao iniciar
+            </summary>
+        </member>
+        <member name="M:Breso.bgAlpha.#ctor(System.Windows.Forms.Form,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,Breso.bgAlpha.Posicao)">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Chamada da funcao para aplicar a transparencia no Form atual<br><br></br></br>
+            <b>Como usar:</b> <i>(preferencialmente usar no formLoad)</i><br></br>
+            <br></br>
+            <br></br><b>bgAlpha MeuForm = new bgAlpha(this);</b>
+            .<br></br>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="T:Breso.Alerta">
+            <summary>
+            Classe usada para exibir <b>MessageBox</b> estilizadas<br></br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>Alerta.MessageBox(this,Modo.SucessoFloat,"Meu alerta");</i>
+            </summary>
+        </member>
+        <member name="T:Breso.Alerta.Modo">
+            <summary>
+            Aqui esta listados todos os metodos de exibição da <b>MessageBox</b> estilizada
+            </summary>
+        </member>
+        <member name="M:Breso.Alerta.MessageBox(System.Windows.Forms.Form,Breso.Alerta.Modo,System.String)">
+            <summary>
+            Classe usada para exibir <b>MessageBox</b> estilizadas<br></br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>Alerta.MessageBox(this,Modo.SucessoFloat,"Meu alerta");</i>
+            </summary>
+        </member>
+        <member name="T:Breso.Temas">
+            <summary>
+            
+            .<br></br>
+            .<br></br>
+            Classe que aplica temas ao seu Form
+            <br></br>
+            <br></br>
+            <b>OBS:</b> Essa opcao é melhor aplicavel em casos que voce NAO usa a funcao <b>bgAlpha</b>, pois ela muda as cores dos componentes e o resultado final fica com os componentes "bugados"
+            
+            .<br></br>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.Temas.Dark(System.Windows.Forms.Form)">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Aplica o tema <b>escuro</b> em seu Form
+            .<br></br>
+            .<br></br>
+            </summary>
+            <param name="form"></param>
+        </member>
+        <member name="M:Breso.Temas.Light(System.Windows.Forms.Form)">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Aplica o tema <b>claro</b> em seu Form
+            .<br></br>
+            .<br></br>
+            </summary>
+            <param name="form"></param>
+        </member>
+        <member name="M:Breso.Temas.DevExpressDark(System.Windows.Forms.Form)">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Aplica o tema semelhante ao framework <b>DevExpress</b> em seu Form
+            .<br></br>
+            .<br></br>
+            </summary>
+            <param name="form"></param>
+        </member>
+        <member name="M:Breso.Temas.OrangeDark(System.Windows.Forms.Form)">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Aplica o tema <b>Laranja Escuro</b> em seu Form
+            .<br></br>
+            .<br></br>
+            </summary>
+            <param name="form"></param>
+        </member>
+        <member name="T:Breso.Cores">
+            <summary>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b>
+            <br></br>
+            <i>Cores A = new Cores(suaVarR, suaVarG, suaVarB, true,false,true);<br></br></i>
+            .<br></br>
+            <b>Em LOOP, ao abrir o painel de cores:</b><br></br>
+            <i>Cores.Aplicar(<b>ref</b> suaVarR, <b>ref</b> suaVarG, <b>ref</b> suaVarB);</i>
+            .<br></br>
+            .<br></br> 
+            <b>Importante:</b><br></br>
+            <i>Nao esquecer do <b>ref</b> na void <b>Cores.Aplicar</b></i>
+            </summary>
+        </member>
+        <member name="M:Breso.Cores.#ctor(System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,Breso.bgAlpha.Posicao)">
+            <summary>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b>
+            <br></br>
+            <i>Cores A = new Cores(suaVarR, suaVarG, suaVarB, true,false,true);<br></br></i>
+            .<br></br>
+            <b>Em LOOP, ao abrir o painel de cores:</b><br></br>
+            <i>Cores.Aplicar(<b>ref</b> suaVarR, <b>ref</b> suaVarG, <b>ref</b> suaVarB);</i>
+            .<br></br>
+            .<br></br> 
+            <b>Importante:</b><br></br>
+            <i>Nao esquecer do <b>ref</b> na void <b>Cores.Aplicar</b></i>
+            </summary>
+        </member>
+        <member name="T:Breso.ColorPicker">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel que captura a cor de onde o ponteiro do mouse está, e converte para <b>RGB</b></br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>ColorPicker AA = new ColorPicker();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.ColorPicker.#ctor">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel que captura a cor de onde o ponteiro do mouse está, e converte para <b>RGB</b></br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>ColorPicker AA = new ColorPicker();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="T:Breso.Editor_de_Textos">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel como um mini-editor de textos, com funcoes basicas, como Abrir, Editar e Salvar</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>Editor_de_Textos f = new Editor_de_Textos();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.Editor_de_Textos.#ctor">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel como um mini-editor de textos, com funcoes basicas, como Abrir, Editar e Salvar</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>Editor_de_Textos f = new Editor_de_Textos();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="T:Breso.Criptografia">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel que serve para criptografar textos</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>Criptografia f = new Criptografia();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.Criptografia.#ctor">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel que serve para criptografar textos</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>Criptografia f = new Criptografia();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="T:Breso.ConversorImagem">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel que serve para converter imagens para outros formatos, incluindo a opcao de converter arquivos individuais ou pastas inteiras</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>ConversorImagem A = new ConversorImagem();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.ConversorImagem.#ctor">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel que serve para converter imagens para outros formatos, incluindo a opcao de converter arquivos individuais ou pastas inteiras</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>ConversorImagem A = new ConversorImagem();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="T:Breso.GeradorSenhas">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel que serve para gerar senhas</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>GeradorSenhas A = new GeradorSenhas();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.GeradorSenhas.#ctor">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel que serve para gerar senhas</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>GeradorSenhas A = new GeradorSenhas();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="T:Breso.Obfuscador">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel que serve para obfuscar arquivos</br>
+            .<br>Lembrando que ele deixa o arquivo ilegivel, ou seja,nao funciona mais ate que seja feito a reversao</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>Obfuscador A = new Obfuscador();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.Obfuscador.#ctor">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel que serve para obfuscar arquivos</br>
+            .<br>Lembrando que ele deixa o arquivo ilegivel, ou seja,nao funciona mais ate que seja feito a reversao</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>Obfuscador A = new Obfuscador();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="T:Breso.LineToArray">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel que serve para converter linhas em formato array</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>LineToArray A = new LineToArray();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.LineToArray.#ctor">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel que serve para converter linhas em formato array</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>LineToArray A = new LineToArray();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="T:Breso.RockstarHasher">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel que serve para converter textos em hashs, usados em mods para GTA5/RDR2</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>RockstarHasher A = new RockstarHasher();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.RockstarHasher.#ctor">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel que serve para converter textos em hashs, usados em mods para GTA5/RDR2</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>RockstarHasher A = new RockstarHasher();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="T:Breso.RedimencionarIMG">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel que serve para redimencionar imagens</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>RedimencionarIMG A = new RedimencionarIMG();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.RedimencionarIMG.#ctor">
+            <summary>
+            .<br></br>
+            .<br>Exibe um painel que serve para redimencionar imagens</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>RedimencionarIMG A = new RedimencionarIMG();</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="T:Breso.Barra">
+            <summary>
+            .<br></br>
+            .<br>Funcao que converte um PANEL em um progressBar</br>
+            .<br>Assim podendo personalizar a cor da barra e a cor de fundo</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>Barra v1 = new Barra(this,panel1, 100, 50);</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.Barra.#ctor(System.Windows.Forms.Form,System.Windows.Forms.Panel,System.Int32,System.Int32)">
+            <summary>
+            .<br></br>
+            .<br>Funcao que converte um PANEL em um progressBar</br>
+            .<br>Assim podendo personalizar a cor da barra e a cor de fundo</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>Barra v1 = new Barra(this,panel1, 100, 50);</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.Barra.SetarValor(System.Windows.Forms.Panel,System.Int32,System.Int32)">
+            <summary>
+            .<br></br>
+            .<br>Funcao que seta o valor da barra (pode ser usada em loop)</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>Barra.SetarValor(panel1, 100, 50);</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.Barra.SetarCor_Barra(System.Windows.Forms.Panel,System.Drawing.Color)">
+            <summary>
+            .<br></br>
+            .<br>Funcao que personaliza a cor da barra(pode ser usada em loop)</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>Barra.SetarCor(panel1,  Color.Red, Color.Black);</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.Barra.SetarCor_Fundo(System.Windows.Forms.Panel,System.Drawing.Color)">
+            <summary>
+            .<br></br>
+            .<br>Funcao que personaliza a cor de fundo(pode ser usada em loop)</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <i>Barra.SetarCor(panel1,  Color.Red);</i>
+            .<br></br>
+            </summary>
+        </member>
+        <member name="T:Breso.ModMenu">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Classe usada para criar forms com design de ModMenus
+            </summary>
+        </member>
+        <member name="T:Breso.ModMenu.Cor">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Estrutura que define as cores do mod
+            </summary>
+        </member>
+        <member name="T:Breso.ModMenu.Coordenadas">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Estrutura que define as posicoes do mod
+            </summary>
+        </member>
+        <member name="T:Breso.ModMenu.Variaveis">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Estrutura que armazena as cores e posicoes do mod
+            </summary>
+        </member>
+        <member name="T:Breso.ModMenu.Funcoes">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Classe que armazena funcoes internas do mod, inutil para usuarios
+            </summary>
+        </member>
+        <member name="T:Breso.ModMenu.Menu">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Classe usada para criar o menu principal
+            </summary>
+        </member>
+        <member name="M:Breso.ModMenu.Menu.CreateMenu(System.Windows.Forms.Form,System.String,System.Action)">
+             <summary>
+             .<br></br>
+             .<br></br>
+             Usado para iniciar um menu<br></br>
+             Por em <b>formLoad</b><br></br><br></br>
+             <b>Como usar:</b><br></br>
+             <code>
+            ModMenu.Menu.CreateMenu(this, "novo menu", () =>
+            {
+               ----Funcoes
+               ModMenu.Menu.EndMenu();
+            });</code>
+             </summary>
+        </member>
+        <member name="M:Breso.ModMenu.Menu.EndMenu">
+             <summary>
+             .<br></br>
+             .<br></br>
+             Funcao usada para finalizar um menu<br></br>
+             <b>Usar dentro da funcao lambda do CreateMenu</b><br></br><br></br>
+             <b>Exemplo:</b><br></br>
+             <code>
+            ModMenu.Menu.CreateMenu(this, "novo menu", () =>
+            {
+               ----Funcoes
+               <b>ModMenu.Menu.EndMenu();</b><br></br>
+            });</code>
+             </summary>
+        </member>
+        <member name="M:Breso.ModMenu.Menu.addOption(System.String,System.Action)">
+             <summary>
+             .<br></br>
+             .<br></br>
+             Funcao que adiciona uma opcao simples que executa clicando
+             .<br></br>.<br></br>
+             <b>Como usar:</b><br></br>
+             <code>
+            ModMenu.Menu.CreateMenu(this, "novo menu", () =>
+            {
+               ModMenu.Menu.addOption("Opcao", () =>
+                 {
+                     --Executa ao clicar
+                 });
+               ModMenu.Menu.EndMenu();
+            });</code>
+             </summary>
+        </member>
+        <member name="M:Breso.ModMenu.Menu.addMenuOption(System.String,System.Action)">
+             <summary>
+             .<br></br>
+             .<br></br>
+             Funcao que adiciona uma opcao para criar um submenu
+             .<br></br>.<br></br>
+             <b>Como usar:</b><br></br>
+             <code>
+            ModMenu.Menu.CreateMenu(this, "Menu", () =>
+            {
+               <b>ModMenu.Menu.addMenuOption("Novo menu", () =></b>
+                 {
+                     --ModMenu.Menu.CreateMenu(this,.....
+                 });
+               ModMenu.Menu.EndMenu();
+            });</code>
+             </summary>
+        </member>
+        <member name="M:Breso.ModMenu.Menu.addInt(System.String,System.Int32@,System.Int32,System.Int32,System.Action{System.Int32})">
+             <summary>
+             .<br></br>
+             .<br></br>
+             Funcao que adiciona uma opcao para alterar INT
+             .<br></br>.<br></br>
+             <b>Como usar: Variavel deve ser passada como REF</b><br></br>
+             <code>
+             <br></br>
+            public static int gg = 0;
+            
+            ModMenu.Menu.CreateMenu(this, "Menu", () =>
+            {
+                ModMenu.Menu.addInt("1", ref gg, 0, 1000, (x) =>
+                               {
+                                   //Aqui o codigo roda em loop, cuidado
+                                   gg = x;
+                                });
+               ModMenu.Menu.EndMenu();
+            });</code>
+             </summary>
+        </member>
+        <member name="M:Breso.ModMenu.Menu.addArray(System.String,System.String[]@,System.Int32@,System.Action{System.Int32})">
+             <summary>
+             .<br></br>
+             .<br></br>
+             Funcao que adiciona uma opcao para alterar ARRAY
+             .<br></br>.<br></br>
+             <b>Como usar: Variavel deve ser passada como REF</b><br></br>
+             <code>
+            public static string[] nomes = { "du", "dudu", "edu" };
+            public static int gg = 0;
+             .<br></br>
+            ModMenu.Menu.CreateMenu(this, "Menu", () =>
+            {
+                ModMenu.Menu.addArray("array", ref nomes, ref gg, (x) =>
+                               {
+                                   //Aqui o codigo roda em loop, cuidado
+                                   gg = x;
+                                });
+               ModMenu.Menu.EndMenu();
+            });</code>
+             </summary>
+        </member>
+        <member name="M:Breso.ModMenu.Menu.addFloat(System.String,System.Double@,System.Double,System.Double,System.Double,System.Action{System.Double})">
+             <summary>
+             .<br></br>
+             .<br></br>
+             Funcao que adiciona uma opcao para alterar FLOAT
+             .<br></br>.<br></br>
+             <b>Como usar: Variavel deve ser passada como REF</b><br></br>
+             <code>
+             <br></br>
+            public static double vvvv = 0.0;
+            
+            ModMenu.Menu.CreateMenu(this, "Menu", () =>
+            {
+                ModMenu.Menu.addFloat("float", ref vvvv, -10.0, 10.0, 0.40, (x) =>
+                               {
+                                   //Aqui o codigo roda em loop, cuidado
+                                   vvvv = x;
+                                });
+               ModMenu.Menu.EndMenu();
+            });</code>
+             </summary>
+        </member>
+        <member name="M:Breso.ModMenu.Menu.addBool(System.String,System.Boolean@,System.Action{System.Boolean})">
+             <summary>
+             .<br></br>
+             .<br></br>
+             Funcao que adiciona uma opcao para alterar BOOL
+             .<br></br>.<br></br>
+             <b>Como usar: Variavel deve ser passada como REF</b><br></br>
+             <code>
+             <br></br>
+            public static bool boleta = false;
+            
+            ModMenu.Menu.CreateMenu(this, "Menu", () =>
+            {
+                ModMenu.Menu.addBool("booooool", ref boleta, (x) =>
+                               {
+                                   //Aqui o codigo roda em loop, cuidado
+                                   boleta = x;
+                                });
+               ModMenu.Menu.EndMenu();
+            });</code>
+             </summary>
+        </member>
+        <member name="T:Breso.ModMenu.SideMenu">
+            <summary>
+            .<br></br>
+            .<br></br>
+            Classe usada para criar o menu lateral
+            </summary>
+        </member>
+        <member name="M:Breso.ModMenu.SideMenu.CreateMenu(System.Windows.Forms.Form,System.String,System.Action)">
+             <summary>
+             .<br></br>
+             .<br></br>
+             Usado para iniciar um menu<br></br>
+             Por em <b>formLoad</b><br></br><br></br>
+             <b>Como usar:</b><br></br><br></br>
+             <code>
+            Form b = new Form();
+            ModMenu.SideMenu.CreateMenu(this, "novo menu", () =>
+            {
+               ----Funcoes
+               ModMenu.SideMenu.EndMenu();
+            });</code>
+             </summary>
+        </member>
+        <member name="M:Breso.ModMenu.SideMenu.EndMenu">
+             <summary>
+             .<br></br>
+             .<br></br>
+             Funcao usada para finalizar um menu<br></br>
+             <b>Usar dentro da funcao lambda do CreateMenu</b><br></br><br></br>
+             <b>Exemplo:</b><br></br>
+             <code>
+            ModMenu.SideMenu.CreateMenu(this, "novo menu", () =>
+            {
+               ----Funcoes
+               <b>ModMenu.SideMenu.EndMenu();</b><br></br>
+            });</code>
+             </summary>
+        </member>
+        <member name="M:Breso.ModMenu.SideMenu.addOption(System.String,System.Action)">
+             <summary>
+             .<br></br>
+             .<br></br>
+             Funcao que adiciona uma opcao simples que executa clicando
+             .<br></br>.<br></br>
+             <b>Como usar:</b><br></br>
+             <code>
+            ModMenu.SideMenu.CreateMenu(this, "novo menu", () =>
+            {
+               ModMenu.SideMenu.addOption("Opcao", () =>
+                 {
+                     --Executa ao clicar
+                 });
+               ModMenu.SideMenu.EndMenu();
+            });</code>
+             </summary>
+        </member>
+        <member name="M:Breso.ModMenu.SideMenu.addMenuOption(System.String,System.Action)">
+             <summary>
+             .<br></br>
+             .<br></br>
+             Funcao que adiciona uma opcao para criar um submenu
+             .<br></br>.<br></br>
+             <b>Como usar:</b><br></br>
+             <code>
+            ModMenu.SideMenu.CreateMenu(this, "Menu", () =>
+            {
+               <b>ModMenu.SideMenu.addMenuOption("Novo menu", () =></b>
+                 {
+                     --ModMenu.SideMenu.CreateMenu(this,.....
+                 });
+               ModMenu.SideMenu.EndMenu();
+            });</code>
+             </summary>
+        </member>
+        <member name="M:Breso.ModMenu.SideMenu.addInt(System.String,System.Int32@,System.Int32,System.Int32,System.Action{System.Int32})">
+             <summary>
+             .<br></br>
+             .<br></br>
+             Funcao que adiciona uma opcao para alterar INT
+             .<br></br>.<br></br>
+             <b>Como usar: Variavel deve ser passada como REF</b><br></br>
+             <code>
+             <br></br>
+            public static int gg = 0;
+            
+            ModMenu.SideMenu.CreateMenu(this, "Menu", () =>
+            {
+                ModMenu.SideMenu.addInt("1", ref gg, 0, 1000, (x) =>
+                               {
+                                   //Aqui o codigo roda em loop, cuidado
+                                   gg = x;
+                                });
+               ModMenu.SideMenu.EndMenu();
+            });</code>
+             </summary>
+        </member>
+        <member name="M:Breso.ModMenu.SideMenu.addArray(System.String,System.String[]@,System.Int32@,System.Action{System.Int32})">
+             <summary>
+             .<br></br>
+             .<br></br>
+             Funcao que adiciona uma opcao para alterar ARRAY
+             .<br></br>.<br></br>
+             <b>Como usar: Variavel deve ser passada como REF</b><br></br>
+             <code>
+            public static string[] nomes = { "du", "dudu", "edu" };
+            public static int gg = 0;
+             .<br></br>
+            ModMenu.SideMenu.CreateMenu(this, "Menu", () =>
+            {
+                ModMenu.SideMenu.addArray("array", ref nomes, ref gg, (x) =>
+                               {
+                                   //Aqui o codigo roda em loop, cuidado
+                                   gg = x;
+                                });
+               ModMenu.SideMenu.EndMenu();
+            });</code>
+             </summary>
+        </member>
+        <member name="M:Breso.ModMenu.SideMenu.addFloat(System.String,System.Double@,System.Double,System.Double,System.Double,System.Action{System.Double})">
+             <summary>
+             .<br></br>
+             .<br></br>
+             Funcao que adiciona uma opcao para alterar FLOAT
+             .<br></br>.<br></br>
+             <b>Como usar: Variavel deve ser passada como REF</b><br></br>
+             <code>
+             <br></br>
+            public static double vvvv = 0.0;
+            
+            ModMenu.SideMenu.CreateMenu(this, "Menu", () =>
+            {
+                ModMenu.SideMenu.addFloat("float", ref vvvv, -10.0, 10.0, 0.40, (x) =>
+                               {
+                                   //Aqui o codigo roda em loop, cuidado
+                                   vvvv = x;
+                                });
+               ModMenu.SideMenu.EndMenu();
+            });</code>
+             </summary>
+        </member>
+        <member name="M:Breso.ModMenu.SideMenu.addBool(System.String,System.Boolean@,System.Action{System.Boolean})">
+             <summary>
+             .<br></br>
+             .<br></br>
+             Funcao que adiciona uma opcao para alterar BOOL
+             .<br></br>.<br></br>
+             <b>Como usar: Variavel deve ser passada como REF</b><br></br>
+             <code>
+             <br></br>
+            public static bool boleta = false;
+            
+            ModMenu.SideMenu.CreateMenu(this, "Menu", () =>
+            {
+                ModMenu.SideMenu.addBool("booooool", ref boleta, (x) =>
+                               {
+                                   //Aqui o codigo roda em loop, cuidado
+                                   boleta = x;
+                                });
+               ModMenu.SideMenu.EndMenu();
+            });</code>
+             </summary>
+        </member>
+        <member name="T:Breso.Funcoes">
+            <summary>
+            .<br></br>
+            Classe com funcoes diversas.<br></br>.<br></br>
+            </summary>
+        </member>
+        <member name="T:Breso.Funcoes.Hora_Data">
+            <summary>
+            .<br></br>
+            Classe para obter informacoes sobre a data/hora atual
+            .<br></br>.<br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.Funcoes.Hora_Data.Hora``1">
+             <summary>
+             .<br></br>
+             .<br>Funcao que captura a HORA atual</br>
+             .<br>Pode retornar no formato INT ou STRING</br>
+             .<br></br>
+             .<br></br>
+             <b>Como usar:</b><br></br>
+             <code> int horaAtual = Hora&lt;int&gt;();</code><br></br>
+             ou<br></br>
+             <code> string horaAtual = Hora&lt;string&gt;();</code><br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.Funcoes.Hora_Data.Minutos``1">
+             <summary>
+             .<br></br>
+             .<br>Funcao que captura os MINUTOS atual</br>
+             .<br>Pode retornar no formato INT ou STRING</br>
+             .<br></br>
+             .<br></br>
+             <b>Como usar:</b><br></br>
+             <code> int MinutosAtual = Minutos&lt;int&gt;();</code><br></br>
+             ou<br></br>
+             <code> string MinutosAtual = Minutos&lt;string&gt;();</code><br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.Funcoes.Hora_Data.Segundos``1">
+             <summary>
+             .<br></br>
+             .<br>Funcao que captura os SEGUNDOS atual</br>
+             .<br>Pode retornar no formato INT ou STRING</br>
+             .<br></br>
+             .<br></br>
+             <b>Como usar:</b><br></br>
+             <code> int SegundosAtual = Segundos&lt;int&gt;();</code><br></br>
+             ou<br></br>
+             <code> string SegundosAtual = Segundos&lt;string&gt;();</code><br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.Funcoes.Hora_Data.Milisegundos``1">
+             <summary>
+             .<br></br>
+             .<br>Funcao que captura os MILISEGUNDOS atual</br>
+             .<br>Pode retornar no formato INT ou STRING</br>
+             .<br></br>
+             .<br></br>
+             <b>Como usar:</b><br></br>
+             <code> int MilisegundosAtual = Milisegundos&lt;int&gt;();</code><br></br>
+             ou<br></br>
+             <code> string MilisegundosAtual = Milisegundos&lt;string&gt;();</code><br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.Funcoes.Hora_Data.Dia``1">
+             <summary>
+             .<br></br>
+             .<br>Funcao que captura o DIA de hoje</br>
+             .<br>Pode retornar no formato INT ou STRING</br>
+             .<br></br>
+             .<br></br>
+             <b>Como usar:</b><br></br>
+             <code> int hoje = Dia&lt;int&gt;();</code><br></br>
+             ou<br></br>
+             <code> string hoje = Dia&lt;string&gt;();</code><br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.Funcoes.Hora_Data.Mes``1">
+             <summary>
+             .<br></br>
+             .<br>Funcao que captura o MES atual</br>
+             .<br>Pode retornar no formato INT ou STRING</br>
+             .<br></br>
+             .<br></br>
+             <b>Como usar:</b><br></br>
+             <code> int hoje = Mes&lt;int&gt;();</code><br></br>
+             ou<br></br>
+             <code> string hoje = Mes&lt;string&gt;();</code><br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.Funcoes.Hora_Data.Ano``1">
+            <summary>
+            .<br></br>
+            .<br>Funcao que captura o ANO atual</br>
+            .<br>Pode retornar no formato INT ou STRING</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <code> int ano = Ano&lt;int&gt;();</code><br></br>
+            ou<br></br>
+            <code> string ano = Ano&lt;string&gt;();</code><br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.Funcoes.Hora_Data.DiaSemana``1">
+            <summary>
+            .<br></br>
+            .<br>Funcao que captura o DIA DA SEMANA atual</br>
+            .<br>Pode retornar no formato INT ou STRING</br>
+            .<br></br>
+            .<br></br>
+            <b>Como usar:</b><br></br>
+            <code> int diasemana = DiaSemana&lt;int&gt;();</code><br></br>
+            ou<br></br>
+            <code> string diasemana = DiaSemana&lt;string&gt;();</code><br></br>
+            </summary>
+        </member>
+        <member name="M:Breso.Funcoes.Hora_Data.DiaAno``1">
+            <summary>
+            .<br>Funcao que captura o DIA DO ANO atual <br></br><br></br>
+            <b>Retorna o dia do ano, e nao o dia do mes</b></br><br></br>
+            <br>Pode retornar no formato INT ou STRING</br>
+            <br></br>
+            <br></br>
+            <b>Como usar:</b><br></br>
+            <code> int diaAno = DiaAno&lt;int&gt;();</code><br></br>
+            ou<br></br>
+            <code> string diaAno = DiaAno&lt;string&gt;();</code><br></br>
+            </summary>
+        </member>
+        <member name="F:BresoLIB.Component1.components">
+            <summary>
+            Variável de designer necessária.
+            </summary>
+        </member>
+        <member name="M:BresoLIB.Component1.InitializeComponent">
+            <summary>
+            Método necessário para suporte ao Designer - não modifique 
+            o conteúdo deste método com o editor de código.
+            </summary>
+        </member>
+    </members>
+</doc>
